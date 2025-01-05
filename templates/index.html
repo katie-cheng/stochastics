@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stochastics Tracker</title>
+</head>
+<body>
+    <h1>Stochastics Tracker</h1>
+    <form action="/add" method="post">
+        <input type="text" name="symbol" placeholder="Add Symbol" required>
+        <button type="submit">Add</button>
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Close Price</th>
+                <th>Stochastic %K</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ "%.2f"|format(row[1]) if row[1] else "N/A" }}</td>
+                <td>{{ "%.2f"|format(row[2]) if row[2] else "N/A" }}</td>
+                <td>
+                    <a href="/delete/{{ row[0] }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
