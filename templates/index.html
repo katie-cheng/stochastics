@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stochastics Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1>Stochastics Tracker</h1>
@@ -11,7 +12,7 @@
         <input type="text" name="symbol" placeholder="Add Symbol" required>
         <button type="submit">Add</button>
     </form>
-    <table border="1">
+    <table>
         <thead>
             <tr>
                 <th>Symbol</th>

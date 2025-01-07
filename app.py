@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os
 import yfinance as yf
-import pandas as pd
 
 app = Flask(__name__)
 
