@@ -1,8 +1,8 @@
 /* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Roboto', sans-serif; /* Clean and modern font */
+    background-color: #121212; /* Dark background */
+    color: #d0d0d0; /* Light gray text */
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,67 +14,118 @@ body {
 
 /* Center the main content */
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
+    color: #b0b0b0; /* Medium gray for the title */
+    text-align: center;
 }
 
+/* Form styling */
 form {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between input and button */
 }
 
-/* Style the input and button */
 form input[type="text"] {
-    padding: 10px;
+    padding: 10px 15px;
     font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
+    border: 1px solid #333; /* Darker border */
+    border-radius: 25px; /* Rounded corners */
+    background-color: #1e1e1e; /* Slightly lighter dark background */
+    color: #d0d0d0; /* Light gray text */
+    outline: none;
+    width: 250px; /* Consistent width */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+form input[type="text"]::placeholder {
+    color: #555; /* Medium gray placeholder text */
 }
 
 form button {
     padding: 10px 20px;
     font-size: 1em;
     border: none;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 4px;
+    background-color: #3a3a3a; /* Medium gray button */
+    color: #d0d0d0; /* Light gray text */
+    border-radius: 25px; /* Rounded corners */
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
 form button:hover {
-    background-color: #0056b3;
+    background-color: #4a4a4a; /* Slightly lighter gray on hover */
 }
 
-/* Style the table */
+/* Table styling */
 table {
-    width: 100%;
-    max-width: 600px;
+    width: 80%;
+    max-width: 800px;
     border-collapse: collapse;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #1e1e1e; /* Dark table background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    overflow: hidden; /* Ensures rounded corners stay intact */
+    margin: 20px 0;
 }
 
 th, td {
-    padding: 15px;
+    padding: 15px 20px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #333; /* Darker borders */
+    font-size: 1em;
 }
 
 th {
-    background-color: #007BFF;
-    color: white;
+    background-color: #2a2a2a; /* Dark gray header */
+    color: #d0d0d0; /* Light gray text */
+    text-transform: uppercase; /* Optional: Makes headers uppercase */
+    font-weight: bold;
+}
+
+tr:last-child td {
+    border-bottom: none; /* Remove border for last row */
 }
 
 tr:hover {
-    background-color: #f1f1f1;
+    background-color: #292929; /* Slightly lighter hover effect */
 }
 
+/* Link styling */
 td a {
     text-decoration: none;
-    color: #007BFF;
+    color: #8a8a8a; /* Medium gray links */
+    font-weight: bold;
 }
 
 td a:hover {
     text-decoration: underline;
+}
+
+/* Delete button styling */
+td a.delete {
+    color: #aa5555; /* Subtle dark red */
+    font-weight: bold;
+}
+
+td a.delete:hover {
+    color: #cc6666; /* Slightly brighter dark red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    table {
+        width: 100%; /* Adjust table width for smaller screens */
+    }
+
+    form input[type="text"] {
+        width: 100%; /* Adjust input width for smaller screens */
+    }
 }
